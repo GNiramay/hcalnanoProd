@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script to submit condor jobs
-# Syntax: . SubmitCondorJob2.sh <text file containing list of input root file paths> <Output location (Preferably eos area)>
-# Example:. SubmitCondorJob2.sh FilePaths/ExpressPhysics_370772.txt /eos/user/n/ngogate/PFG_Task/NanoAod/ExpressPhysics_FEVT_Express-v2_370772/
+# Syntax: . SubmitCondorJob.sh <text file containing list of input root file paths> <Output location (Preferably eos area)>
+# Example:. SubmitCondorJob.sh FilePaths/ExpressPhysics_370772.txt /eos/user/n/ngogate/PFG_Task/NanoAod/ExpressPhysics_FEVT_Express-v2_370772/
 
 # Define variables
 FPATH=$1
