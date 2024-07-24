@@ -15,9 +15,20 @@ scram p $MyCMSSW
 cd $MyCMSSW/src
 cmsenv
 
-# Get the main processing script (Global runs)
-runTheMatrix.py -l 1060.1 --dryRun
-cd 1060.1_RunZeroBias2022D/
+# Get the main processing scripts
+runTheMatrix.py -l 1060.1 --dryRun # Global
+runTheMatrix.py -l 1060.2 --dryRun # Calibration gap (Local)
 scram b -j8 --ignore-arch
+
+# Generate the Global cfg
+cd 1060.1_RunZeroBias2022D/
 cp cmdLog cmdLog.sh
 . cmdLog.sh
+
+# Generate the Local cfg
+cd ../1060.2_TestEnablesEcalHcal2023C/
+cp cmdLog cmdLog.sh
+. cmdLog.sh
+
+# Return to the working directory
+cd ../../../
