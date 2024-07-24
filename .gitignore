@@ -1,0 +1,4 @@
+CMSSW_*
+Log/*
+StdErr/*
+StdOut/*
