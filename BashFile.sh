@@ -1,16 +1,16 @@
 #!/bin/bash
 # Script to produce hcalnano from RAW files
 # This will be used at the condor node.
-# Syntax: . BashFile.sh <input RAW ROOT> <Output file location>
+# Syntax: . BashFile.sh <CMSSW version> <input RAW ROOT> <Output file location>
 
-InRoot=$1
-OutLoc=$2
+CMSSWVer=$1
+InRoot=$2
+OutLoc=$3
 OutRoot=${OutLoc}/$(basename $InRoot)
-MyCMSSW=CMSSW_14_1_0_pre0
 
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-scram p $MyCMSSW
-cd $MyCMSSW/src
+scram p $CMSSWVer
+cd $CMSSWVer/src
 cmsenv
 cd -
 
