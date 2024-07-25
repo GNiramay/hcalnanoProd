@@ -5,6 +5,7 @@ mkdir StdOut
 mkdir StdErr
 mkdir Log
 mkdir ConfFiles
+mkdir FilePaths
 
 # Initialize the latest stable CMSSW
 MyCMSSW=CMSSW_14_1_0_pre0
