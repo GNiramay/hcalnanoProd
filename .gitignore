@@ -2,3 +2,6 @@ CMSSW_*
 Log/*
 StdErr/*
 StdOut/*
+ConfFiles/*
+*.root
+FilePaths/*
