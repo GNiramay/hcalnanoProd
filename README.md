@@ -10,6 +10,8 @@ Repository for producing hcalnanos from RAW for local and global runs.
 1. Put the desired CMSSW version on line 10 of `firsttime.sh`
 2. Execute `source firsttime.sh` - This should be executed only once. If a different CMSSW version is required, delete the previous CMSSW folder, edit line 10, and execute it again.
 
+[NOTE: Make sure your GRID certificate is valid, before using the code.]
+
 ## Global runs
 1. Get the list of available datasets using `. FindDataset.sh <run number>`
 2. Copy the desired dataset from the output. This will be needed in the next step
@@ -43,4 +45,4 @@ cd LocalRuns/
 . LocalRun.sh 383596 .
 ```
 
-[NOTE: Make sure your GRID certificate is valid, before using the code.]
+Developer - Niramay Gogate. (mattermost @ngogate)
