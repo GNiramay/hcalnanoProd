@@ -26,7 +26,7 @@ echo "Transfer_Input_Files = ${CfgFile}" >> $CondFile
 printf "Output = StdOut/${FKEY}_%s(Cluster)_%s(ProcId).stdout\n" $ $>> $CondFile
 printf "Error = StdErr/${FKEY}_%s(Cluster)_%s(ProcId).stderr\n" $ $>> $CondFile
 printf "Log = Log/${FKEY}_%s(Cluster)_%s(ProcId).log\n" $ $>> $CondFile
-printf "Arguments = ${CMSSWVer} root://cmsxrootd.fnal.gov/%s(InRootFile) ${OutPath}\n" $ >> $CondFile
+printf "Arguments = ${CMSSWVer} root://xrootd-cms.infn.it/%s(InRootFile) ${OutPath}\n" $ >> $CondFile
 echo "queue InRootFile from $FPATH" >> $CondFile
 
 # submit condor jobs
