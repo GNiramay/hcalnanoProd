@@ -19,10 +19,10 @@ ls -alht
 
 # Make NanoAOD (Global runs)
 time cmsDriver.py step2\
-     -s RAW2DIGI,RECO,USER:DPGAnalysis/HcalNanoAOD/hcalNano_cff.hcalNanoTask\
-     --conditions auto:run3_data_prompt -n -1\
-     --era Run3 --geometry DB:Extended --processName USER\
-     --datatier NANOAOD --eventcontent NANOAOD\
+     -s RAW2DIGI,RECO,NANO:@HCAL --process NANO --data --eventcontent NANOAOD\
+     --datatier NANOAOD -n -1\
+     --era Run3_2024,run3_nanoAOD_pre142X\
+     --conditions auto:run3_data_prompt --processName NANO\
      --filein $InRoot --fileout file:$OutRoot
 
 # # Make NanoAOD (Calibration gap)
